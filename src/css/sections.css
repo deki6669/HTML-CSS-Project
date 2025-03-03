@@ -1,0 +1,918 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             HEADER              * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* * * * * * *             NAV MENU              * * * * * * * */
+
+/* flex parent  */
+nav {
+    background-color: var(--bg2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    transition: 0.3s ease;
+
+    padding: 0 var(--padding-lr);
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+/* flex child 1  */
+/* nav logo  */
+.logo {
+    flex: 0 0 auto;
+    margin: auto;
+    margin-left: 0px;
+}
+
+
+/* square vs horizontal logo  */
+
+.logo-hor {
+    width: 200px;
+    display: none;
+}
+
+.logo-sq {
+    width: 80px;
+    z-index: 6;
+}
+
+
+/* nav list  */
+/* flex child 2 */
+
+/* MOBILE MENU  */
+#myLinks {
+    flex: 1 1 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* height: 100vh; */
+    /* se stava so js  */
+    height: 0px;
+    transition: 0.3s;
+    overflow: hidden;
+
+    background-color: var(--bg2);
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 20% 0px 20%;
+}
+
+/* pc links  */
+#mylinks-inside {
+    display: none;
+}
+
+nav a {
+    padding: 1rem 2rem;
+    /* margin: 1rem 0; */
+
+    width: 100%;
+    text-align: center;
+
+    font-size: calc(var(--font-size) + 0.2rem);
+}
+
+nav a:first-child {
+    margin-top: 60px;
+}
+
+nav a:last-child {
+    margin-bottom: 60px;
+}
+
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.logo a {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* hamburger menu  */
+/* flex child 3  */
+
+#hamburger-menu {
+    height: 60px;
+    width: 60px;
+
+
+    position: relative;
+    padding: 10px;
+
+    margin: 0;
+    z-index: 6;
+}
+
+#hamburger-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.triagolnik {
+    background-color: var(--white);
+    height: 10px;
+    width: 10px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* da bide 3-agolnik */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.ham-crtka {
+    position: absolute;
+    top: 50%;
+
+    height: 0px;
+    width: 100%;
+    border-bottom: 3px solid var(--white);
+
+    transition: 0.3s;
+}
+
+#b1 {
+    transform: translateY(10px);
+}
+
+#b3 {
+    transform: translateY(-10px);
+}
+
+
+/* * * * * * *             HERO BANNER             * * * * * * * */
+/* * * * * * *             HERO BANNER             * * * * * * * */
+/* * * * * * *             HERO BANNER             * * * * * * * */
+
+/* bg  */
+#hero-banner {
+    height: 80vh;
+    /*za da se znae deka mozhe da skrolash*/
+
+    /* da se pomesti zaradi absolute navbar ? */
+    /* margin-top: 60px; */
+
+    background-color: var(--bg3);
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* elementi vo pozadina  */
+.hero-bg {
+    width: 65vw;
+    height: 65vw;
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+
+.levo {
+    left: -10vw;
+    bottom: -25vh;
+}
+
+.desno {
+    right: -50vw;
+    top: -5vh;
+}
+
+/* ZA ANIMACIJA  */
+
+/* follow  */
+
+/* najdov i povrzav gotova skripta  */
+
+.follow {
+    top: 50%;
+    left: 50%;
+    /* za da pocne vo centar  */
+    margin: -50px 0 0 -50px;
+    /* za da ne iskacha od parent  */
+
+    width: clamp(50px, 10vw, 200px) !important;
+    height: clamp(50px, 10vw, 200px) !important;
+    /* da ne bide pomalo od 50 i pogolemo od 200px  */
+    /* important poradi conflict so hero-bg klasa za site portokalovi elementi */
+}
+
+/* svetla vo pozadina */
+
+#dl,
+#dd {
+    transform:
+        translateX(var(--custom-x)) translateY(var(--custom-y)) scaleX(var(--custom-sx)) scaleY(var(--custom-sy)) rotate(var(--custom-r)) skewX(20deg) skewY(-20deg);
+    /* definiram transformacii so varijabli koi gi menuvam so Math.random vo js */
+
+    transition-duration: 1.5s;
+    transition-timing-function: ease-out;
+}
+
+
+/* content  */
+
+/* parent flex  */
+.flex-wrapper {
+    padding: 0px var(--padding-lr);
+    /*left right */
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+
+    backdrop-filter: blur(100px);
+}
+
+/* flex child 1 */
+.text-wrapper {
+    /* margin: 5rem 0px; */
+
+    /* offset radi navbar */
+    margin-top: 60px;
+
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.text-wrapper h1,
+.text-wrapper p {
+    color: var(--white);
+    display: inline-block;
+    width: 100%;
+}
+
+.hero-btns-container {
+    display: inline-flex;
+    gap: 1em;
+}
+
+
+/* flex child 2 */
+#logo-element-wrapper {
+    width: 50%;
+}
+
+
+.cls-1:hover {
+    fill: var(--orange);
+    transform: translate(5px, -5px);
+    transition: 0.3s;
+}
+
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+
+
+#logos-carousel {
+    height: 16vh;
+    background-color: var(--black);
+
+    overflow: hidden;
+}
+
+#logos-carousel-slider {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 300vw;
+
+    animation-name: carousel-scroll;
+    animation-duration: 20s;
+    /*40 na desktop*/
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /*linear za da ne secka na loop*/
+}
+
+#logos-carousel-slider div {
+    width: calc(300vw / 12);
+    padding: 0 5px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             MAIN SECTION               * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+#about-us {
+    background-color: var(--bg2);
+}
+
+.robot-hello {
+    width: clamp(60%, 70vw, 80%);
+    margin: 0 auto;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             WORK               * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+.work-article {
+    border-top: 2px var(--white) solid;
+    padding: 1rem;
+    padding-top: 1.8rem;
+    cursor: pointer;
+    &.hover-active:hover{
+        background-color: hsla(0, 0%, 100%, 0.025);
+    }
+}
+
+
+.work-article:last-child {
+    border-bottom: 2px var(--white) solid;
+}
+
+.work-article-flex {
+    display: flex;
+}
+
+.work-article-text {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.work-article-text p {
+    margin-bottom: 1.8rem;
+}
+
+/* za expand aminacija  */
+
+/* slika  */
+.work-article-img {
+    max-width: 20%;
+    align-self: center;
+
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+/* +  */
+.plus-img {
+    flex: 0 0 1.5rem;
+    order: 2;
+
+    max-height: 0px;
+    & img{
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+}
+
+
+/* p text  */
+
+.w-txt{
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *         CASE STUDIES           * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.case-studies {
+    background-color: var(--bg2);
+}
+
+.case-studies-overflow {
+    background-color: var(--bg2);
+}
+
+
+#cases-slider-wrapper {
+    position: relative;
+}
+
+#cases-slider {
+    width: 100%;
+}
+
+/* flex parent  */
+
+#cases-wrapper {
+    display: flex;
+    column-gap: 2em;
+    flex-wrap: nowrap;
+}
+
+/* flex child  */
+
+.case-study {
+    padding: 2em;
+
+    max-width: 100vw;
+    flex: 0 0 auto;
+}
+
+.case-study p {
+    margin-bottom: 1em !important;
+}
+
+
+/* za da ima neshto prazno na kraj za skrolanje */
+
+.case-study:last-child {
+    flex: 1 0 30vw;
+    position: relative;
+}
+
+.case-study:last-child h3 {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.case-study-img {
+    margin-bottom: 2em;
+}
+
+.case-study p {
+    margin-bottom: 0;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *            CLIENTS             * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.clients-hover-bg:hover {
+    background-color: rgba(239, 239, 239, 0.01);
+}
+
+#our-partners {
+    background-color: var(--black);
+}
+
+
+#client-logos-flex {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto;
+
+    margin-bottom: 2em;
+}
+
+
+#client-logos-flex .border-wh img {
+    padding: 2em;
+}
+
+/* testimonials  */
+
+#testimonials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    overflow: hidden;
+}
+
+
+.rarrow {
+    order: 2;
+}
+
+#testimonials-window {
+    width: 60vw;
+    overflow: hidden;
+}
+
+#testimonials-slider {
+    display: flex;
+    width: 60vw;
+    /* overflow: hidden; */
+
+    transition: 0.3s;
+}
+
+
+#testimonials-slider>div {
+    width: 60vw;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    /* display: flex;
+    justify-content: center; */
+}
+
+#testimonials-slider>div p {
+    margin: 0 auto;
+}
+
+
+.larr-btn,
+.rarr-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *          CONTACT               * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#contact-relative {
+    position: relative;
+    gap: 0px;
+}
+
+#slika-go {
+    /* width: calc(50% - 4rem); */
+    width: 100%;
+    /* position: absolute; */
+    margin-top: 3em;
+    bottom: 0;
+}
+
+/* #contact-r {
+     width: 50%;
+} */
+
+#contact-r form {
+    width: 100%;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             FOOTER             * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+footer {
+    background-color: var(--bg3);
+    text-align: center;
+}
+
+/* flex parent */
+.footer-links-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+/* flex child 1  */
+.footer-list {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: 1rem 4rem;
+
+    text-align: left;
+    margin: 0;
+    padding: 0;
+
+    height: 10rem;
+}
+
+/* flex child 2 */
+#social-links {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    width: min-content;
+}
+
+
+/* hover  */
+
+footer a:not(.footer-btn) {
+    border-bottom: 2px transparent solid;
+}
+
+footer a:not(.footer-btn):hover {
+    opacity: 100%;
+    border-color: var(--orange);
+}
+
+.footer-btn {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+.footer-btn:hover {
+    opacity: 100%;
+}
+
+
+.footer-logo {
+    display: inline-block !important;
+    margin: 0 auto;
+}
+
+/* ANIMACIJA SVG */
+/* ANIMACIJA SVG */
+@keyframes topce-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(3%, -3%);
+    }
+
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#topce-1 {
+    animation-name: topce-1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes oblak-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(4%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#cloud-1 {
+    animation: oblak-1 4.5s linear infinite;
+}
+
+@keyframes oblak-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-4%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#cloud-2 {
+    animation: oblak-2 6.5s linear infinite;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *            THE TEAM            * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* prv section  */
+.first-page-section {
+    margin-top: 60px;
+}
+
+hr {
+    margin-bottom: 2rem;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 0.5rem;
+}
+
+.cards-wrapper p {
+    margin-bottom: 0.5rem;
+}
+
+.cards-wrapper .opacity {
+    margin: 0.5rem 0;
+}
+
+.cards-wrapper h3 {
+    margin: 0.5rem 0;
+}
+
+
+.team-card {
+    padding: 0.5rem;
+}
+
+.cards-wrapper img:not(span>img) {
+    background: linear-gradient(to top, var(--orange) -30%, transparent 90%)
+}
+
+.mail-s {
+    display: inline-block;
+    width: 1em;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *           CAREERS              * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+.lr-inline {
+    display: inline-block;
+    width: 1.2em;
+    transform: translateY(0.2em);
+    margin-right: 0.5em;
+}
+
+.careers-list {
+    /* list-style-type: none; */
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.careers-list p {
+    border-bottom: 2px var(--white) solid;
+    padding-bottom: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* cards  */
+
+.careers-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.card-wrapper {
+    flex: 0 1 calc(50% - 0.5rem);
+}
+
+.apply-now-btn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.apply-now-btn p {
+    margin: 0;
+}
+
+.apply-now-btn div {
+    width: calc(var(--font-size) - 0.2rem);
+}
+
+.apply-now-btn:hover img {
+    filter: invert(90%);
+}
+
+/* form hidden  */
+
+
+.form-hidden {
+    opacity: 0%;
+    height: 100px;
+    visibility: collapse;
+
+    transition: 0.3s;
+}
+
+
+.form-hidden:hover {
+    height: 100%;
+    opacity: 100%;
+    visibility: visible;
+}
+
+.unhide-btn:focus~.form-hidden {
+    height: 100%;
+    opacity: 100%;
+    visibility: visible;
+}
+
+/* animacija about section  */
+/* animacija about section  */
+/* animacija about section  */
+
+@keyframes raka-h {
+
+    0% {
+        transform: translateX(0%);
+    }
+
+    40% {
+        transform: translateX(3%);
+    }
+
+    66% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#raka-h {
+    animation: raka-h 1s ease-in-out alternate infinite;
+
+}
+
+@keyframes talking {
+
+    0% {
+        transform: translateX(3%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-3%);
+    }
+}
+
+
+#wave-inner {
+    animation: talking 0.8s ease-in-out alternate infinite;
+}
+
+
+@keyframes orb-1 {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#topce-h {
+    transform-origin: center;
+    animation: orb-1 4s ease-in-out alternate infinite;
+}

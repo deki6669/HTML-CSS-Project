@@ -1,0 +1,63 @@
+/* ustom varijabli  */
+/* ustom varijabli  */
+/* ustom varijabli  */
+
+/* wide  */
+@media screen and (min-width: 1900px) {
+
+    :root {
+        --padding-lr: 15vw !important;
+
+        /* font size  */
+
+        --font-size: 1.1vw !important;
+    }
+}
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    :root {
+        /* font size  */
+        --font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {
+    :root {
+        /* padding levo-desno */
+        --padding-lr: 10%;
+        --padding-up-down: 5rem;
+    }
+}
+
+
+/* * * * * * * * * section flex * * * * * * * */
+/* * * * * * * * * section flex * * * * * * * */
+/* * * * * * * * * section flex * * * * * * * */
+
+/* tablet (blue) */
+@media screen and (min-width: 720px) {
+    .section-flex {
+        flex-direction: row;
+        row-gap: 0em;
+        /*gore-dole*/
+        column-gap: 4em;
+        /*l-r*/
+    }
+}
+
+
+/* laptop (green)*/
+@media screen and (min-width: 1000px) {}
+
+
+/* * * * * za desktop (red) * * * * */
+@media screen and (min-width: 1500px) {}

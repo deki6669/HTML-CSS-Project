@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.6 28.41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #efefef;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="35.6" y1="14.21" x2="1.39" y2="14.21"/>
+  <polyline class="cls-1" points="14.91 27.71 1.41 14.21 14.91 .71"/>
+</svg>

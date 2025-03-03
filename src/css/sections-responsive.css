@@ -1,0 +1,522 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             HEADER              * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* * * * * * *             NAV MENU              * * * * * * * */
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    /* nav {
+        background-color: blue;
+    } */
+
+    /* logo */
+
+    .logo-hor {
+        display: block;
+        margin-right: 1rem;
+        z-index: 6;
+    }
+
+    .logo-sq {
+        display: none;
+    }
+
+}
+
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+    /* nav {
+        background-color: green;
+    } */
+
+
+    /* nav links */
+
+    #myLinks {
+        display: none;
+    }
+
+    /* PC MENU  */
+    #mylinks-inside {
+
+        display: flex;
+        gap: 1.2rem;
+
+        flex-direction: row;
+        align-items: center;
+
+        margin: 1rem 0 1rem;
+    }
+
+    /* burger menu */
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    /* links  */
+
+    nav a:first-child {
+        margin-top: 0px;
+    }
+
+    nav a:last-child {
+        margin-bottom: 0px;
+    }
+
+    nav a {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        padding: 0;
+        margin: 0;
+
+        flex: 1 0 min-content;
+    }
+
+    nav .btn {
+        padding: 0.25em 1.25em;
+    }
+}
+
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {
+
+    /* nav {
+        background-color: red;
+    } */
+
+    /* PC MENU  */
+    #mylinks-inside {
+        gap: 1.5rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* * * * * * *             HERO BANNER             * * * * * * * */
+/* * * * * * *             HERO BANNER             * * * * * * * */
+/* * * * * * *             HERO BANNER             * * * * * * * */
+
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    /* elementi vo pozadina  */
+    .hero-bg {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .levo {
+        left: -10vw;
+        bottom: -15vh;
+    }
+
+    .desno {
+        right: -30vw;
+        top: 10vh;
+    }
+
+    /* content  */
+
+    /* parent flex  */
+    .flex-wrapper {
+        flex-direction: row;
+    }
+
+    /* flex child 1 */
+    .text-wrapper {
+        margin-top: 60px;
+        text-align: left;
+        flex-shrink: 1;
+    }
+
+    /* flex child 2 */
+    #logo-element-wrapper {
+        margin-top: 60px;
+        /* width: 50%; */
+    }
+
+
+}
+
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+    /* elementi vo pozadina  */
+    .hero-bg {
+        width: 50vw;
+        height: 50vw;
+    }
+
+
+    .levo {
+        left: -20vw;
+        bottom: -50vh;
+    }
+
+    .desno {
+        right: -20vw;
+        top: -50vh;
+    }
+
+}
+
+
+/* * * * * za desktop *(red) * * * */
+
+@media screen and (min-width: 1500px) {
+
+    /* elementi vo pozadina  */
+    .hero-bg {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .levo {
+        left: -30vw;
+        bottom: -50vh;
+    }
+
+    .desno {
+        right: -10vw;
+        top: -50vh;
+    }
+
+    /* btns  */
+    .hero-btns-container {
+        display: flex;
+    }
+}
+
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+/* * * * * * *             LOGOS CAROUSEL             * * * * * * * */
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+    #logos-carousel-slider div {
+        padding: 0 2rem;
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+
+    #logos-carousel-slider {
+        animation-duration: 40s;
+    }
+
+    #logos-carousel-slider div {
+        padding: 0 clamp(2rem, 6vw, 7rem);
+    }
+
+}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {
+
+    #logos-carousel-slider div {
+        padding: 0 clamp(5rem, 7vw, 10rem);
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             MAIN SECTION               * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* #about-us {} */
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    .robot-hello {
+        align-self: center;
+        width: clamp(60%, 70vw, 80%);
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+    .robot-hello {
+        align-self: flex-end;
+        width: clamp(60%, 60vw, 80%);
+        margin-left: 1rem;
+        ;
+        /*za tekstot da go sredi*/
+    }
+}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {
+    .robot-hello {
+        align-self: flex-end;
+        width: clamp(60%, 60vw, 60%);
+        margin-left: 1rem;
+        ;
+        /*za tekstot da go sredi*/
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             WORK               * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    .work-article-img {
+        margin-right: 2em;
+    }
+
+    #work h2+p {
+        margin-bottom: 3em;
+    }
+
+    #work {
+        flex-direction: column;
+    }
+
+}
+
+/* bonus media  */
+
+@media screen and (min-width: 800px) {
+
+    .work-list {
+        max-width: 50%;
+    }
+
+    .work-article-img {
+        margin-right: unset;
+    }
+
+    #work h2+p {
+        margin-bottom: unset;
+    }
+
+    #work {
+        flex-direction: unset;
+    }
+
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *         CASE STUDIES           * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    .case-study {
+        max-width: 60vw;
+    }
+
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+    .case-study {
+        max-width: 40vw;
+    }
+}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *            CLIENTS             * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+
+    #client-logos-flex {
+        margin-bottom: 4em;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *          CONTACT               * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+
+    #contact-relative {
+        position: relative;
+        gap: 0px;
+    }
+
+    #contact-r {
+        width: 50%;
+    }
+
+    #slika-go {
+        width: calc(50% - 2em);
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+    #contact-r {
+        width: 50%;
+    }
+
+    #slika-go {
+        width: calc(50% - 4em);
+    }
+}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {
+
+    #contact-r {
+        width: 45%;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *             FOOTER             * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    .footer-btn {
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *            THE TEAM            * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {
+
+    .cards-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem 1rem;
+    }
+
+    .team-card {
+        padding: 1rem;
+    }
+
+}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * *           CAREERS              * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* tablet (blue) */
+
+@media screen and (min-width: 720px) {
+
+    .careers-why {
+        align-self: center;
+    }
+
+    .careers-cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* laptop (green)*/
+
+@media screen and (min-width: 1000px) {}
+
+/* * * * * za desktop (red) * * * * */
+
+@media screen and (min-width: 1500px) {}
